@@ -10,7 +10,7 @@ const ProductsPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:8080/products")
+    fetch("https://geegstack.onrender.com/products")
     .then(res => res.json())
     .then(response => {
       if (response.type === "error") {

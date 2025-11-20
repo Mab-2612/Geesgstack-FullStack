@@ -20,7 +20,7 @@ const EditProductPage = () => {
         Toast.fire({icon: "error", title: "You need to be logged in..."})
         .then(() => navigate("/admin_login"));
       }
-      fetch("http://localhost:8080/products/" + params.id)
+      fetch("https://geegstack.onrender.com/products/" + params.id)
       .then(res => res.json())
       .then(response => {
         if (response.type === "error") {
@@ -41,7 +41,7 @@ const EditProductPage = () => {
       let formData = {...form, images: [form.imageurl], price: parseFloat(form.price)};
       formData = JSON.stringify(formData);
 
-      fetch("http://localhost:8080/products/" + params.id, {
+      fetch("https://geegstack.onrender.com/products/" + params.id, {
         method: "PUT", 
         headers: {"Content-Type": "application/json", token: "Bearer " + adminToken},
         body: formData

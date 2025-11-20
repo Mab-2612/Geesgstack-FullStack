@@ -13,7 +13,7 @@ const ProductDetailsPage = () => {
   const adminToken = window.sessionStorage.getItem("admintk");
   
     useEffect(() => {
-      fetch("http://localhost:8080/products/" + params.id)
+      fetch("https://geegstack.onrender.com/products/" + params.id)
       .then(res => res.json())
       .then(response => {
         console.log(response)
@@ -39,7 +39,7 @@ const ProductDetailsPage = () => {
       })
       .then(res => {
         if(res.isConfirmed) {
-          fetch("http://localhost:8080/products/" + params.id, {
+          fetch("https://geegstack.onrender.com/products/" + params.id, {
             method: "DELETE",
             headers: {token: "Bearer " + adminToken}
           })
