@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Geegstack E-commerce</title>
+</head>
+<body>
+    <header class="flex">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Products</a></li>
+            </ul>
+        </nav>
+
+        <!-- <img src="images/geegstack-standalone.png" alt="Geegstack Logo" id="logo"> -->
+        <h3 class="title">Geegstack Store</h3>
+
+        <!-- <img src="../images/search-icon.svg" alt="Search" id="search-icon"> -->
+     
+        <!-- <div>
+            <a href="/products/new">
+                <button class="price">Add Product</button>
+            </a>
+
+            <form 
+            action="/admin/logout" 
+            method="post" 
+            onsubmit="return confirm('Are you sure you want to logout?')"
+            >
+                <button type="submit">Logout</button>
+            </form>
+        </div> -->
+
+        <a href="/admin/profile">
+            <button class="price">Profile</button>
+        </a>
+
+        <!-- <a href="/admin/login">
+            <button class="price">Login</button>
+        </a> -->
+        
+    </header>
+    <main class="product-details">
+        <h2>Add Product</h2>
+        <p class="error"></p>
+        <div class="form-container">
+            <form action="/products" method="post">
+                <div>
+                    <label for="name">
+                        <p>Product Name</p>
+                    </label>
+                    <input type="text" name="name" id="" >
+                </div>
+                <div>
+                    <label for="price">
+                        <p>Product Price</p>
+                    </label>
+                    <input type="number" name="price" >
+                </div>
+                <div>
+                    <label for="description">
+                        <p>Product Description</p>
+                    </label>
+                    <textarea name="description" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for="image">
+                        <p>Product Image URL</p>
+                    </label>
+                    <input type="string" name="image" id="">
+                </div>
+                <div>
+                    <label for="category">
+                        <p>Product category</p>
+                    </label>
+                    <select name="category" id="">
+                        <option value="Accessories">Accessories</option>
+
+                        <option value="Apparel">Apparel</option>
+
+                        <option value="Bags">Bags</option>
+                    </select>
+                </div>
+                <input type="submit" value="Create Product">
+            </form>
+        </div>
+    </main>    
+    <footer>
+        <p>&copy; Geegstack Academy, 2023</p>
+    </footer>
+    </body>
+    </html>
